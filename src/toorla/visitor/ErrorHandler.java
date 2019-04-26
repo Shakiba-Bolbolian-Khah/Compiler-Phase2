@@ -100,7 +100,7 @@ public class ErrorHandler implements Visitor {
 
         if(name.contains("$")){
             int dollarIndex = name.indexOf("$");
-            name = name.substring(0,dollarIndex);//TODO:check
+            name = name.substring(0,dollarIndex);
             System.out.println("Error:Line:" + localVarDef.line + ":Redefinition of Local Variable " + name +  " in current scope");
 
             hasError = true;
@@ -297,7 +297,7 @@ public class ErrorHandler implements Visitor {
         }
         else if(name.contains("$")) {
             int dollarIndex = name.indexOf("$");
-            name = name.substring(0,dollarIndex);//TODO:check
+            name = name.substring(0,dollarIndex);
 
             System.out.println("Error:Line:" + fieldDeclaration.line + ":Redefinition of Field " + name);
 
@@ -312,7 +312,7 @@ public class ErrorHandler implements Visitor {
             }
 
             if(reDifined) {
-                System.out.println("Error:Line:" + fieldDeclaration.line + ":Redefinition of Field " + fieldDeclaration.getIdentifier().getName());
+                System.out.println("Error:Line:" + fieldDeclaration.line + ":Redefinition of Field " + name);
                 hasError = true;
             }
 
@@ -331,7 +331,7 @@ public class ErrorHandler implements Visitor {
         {
             int dollarIndex = name.indexOf("$");
             name = name.substring(0,dollarIndex);//TODO:check
-            System.out.println("Error:Line:" + parameterDeclaration.line + ":Redefinition of Local Variable" + name + "in current scope");
+            System.out.println("Error:Line:" + parameterDeclaration.line + ":Redefinition of Local Variable " + name + " in current scope");
             hasError = true;
         }
 

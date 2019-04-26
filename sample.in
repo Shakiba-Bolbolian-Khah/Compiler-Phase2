@@ -1,33 +1,50 @@
-class Yazdani inherits Ahmadhossein:
-    field x1 , y1 , z bool;
-
-
-    private function main( a : int ) returns int :
-        return 0;
-    end
-
-
-
-end
-
-
-entry class Ahmadhossein inherits Any1 :
-    field x , y , z int;
+entry class Test:
+    public field entr int;
+    public field temp bool;
+    public field length bool;
 
     public function main() returns int :
-        return 0;
+        var length = 2;
+    end
+    public function temp2() returns int :
+        var temp2 = 2;
+    end
+end
+
+class sss inherits sss2:
+    public field temp int;
+    public field temp2 int;
+    public function temp2() returns int :
+        var temp2 = 2;
     end
 
+    public function temp3() returns int :
+        var temp2 = 2;
+        begin
+            var temp2 = 2;
+        end
+        if (a==2)
+            var temp2 = 4;
+        elif(a==3)begin
+            var temp2 = 4;
+            var sc = 4;
+            var sc = 1;
+        end
+        else
+            var temp2 = 4;
+        while(a==4)
+            var temp2 = 4;
+
+    end
 
 end
 
-class Any :
-    field x int;
-
-
+class sss2 inherits sss3:
+    public field a int;
+    public function b() returns int :end
+    public field a int;
+    public function b() returns int :end
 end
 
-
-class Any1:
-    field z int;
+class sss3 inherits Test:
 end
