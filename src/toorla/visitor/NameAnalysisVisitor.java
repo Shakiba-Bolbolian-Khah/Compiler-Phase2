@@ -43,7 +43,7 @@ public class NameAnalysisVisitor implements Visitor {
             ClassSymbolTableItem cst = (ClassSymbolTableItem) item.getValue();
             String parName = cst.getParentName();
             if(parName != null){
-                if(items.containsKey(parName)){
+                if(!parName.equals("Any-classItem") && items.containsKey(parName)){
                     SymbolTable parentSymbolTable = ((ClassSymbolTableItem) items.get(parName)).getSymbolTable();
                     cst.setPre(parentSymbolTable);
                 }
